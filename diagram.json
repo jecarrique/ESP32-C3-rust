@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "ESP32-C3 Rust Template",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-c3-devkit-m1",
+      "id": "esp",
+      "top": 10,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": 310,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 20,
+      "left": 295,
+      "attrs": { "value": "220", "label": "220Ω" },
+      "rotate": 90
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 100,
+      "left": 290,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 220,
+      "left": 270,
+      "attrs": { "label": "Potenciómetro" }
+    }
+  ],
+  "connections": [
+    ["esp:GPIO2", "r1:1", "green", ["v0"]],
+    ["r1:2", "led1:A", "green", ["v0"]],
+    ["led1:K", "esp:GND.1", "black", ["v0", "h-50"]],
+    ["esp:GPIO9", "btn1:1.r", "blue", ["h20"]],
+    ["btn1:2.r", "esp:GND.1", "black", ["h30", "v80"]],
+    ["esp:GPIO4", "pot1:SIG", "orange", ["v10"]],
+    ["esp:3V3", "pot1:VCC", "red", ["v5", "h70"]],
+    ["esp:GND.2", "pot1:GND", "black", ["v5", "h70"]]
+  ],
+  "serialMonitor": {
+    "display": "terminal",
+    "newline": "lf",
+    "baudRate": 115200
+  }
+}
