@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "author": "ESP32-C3 Rust Template",
+  "author": "Juan Esteban Carrique",
   "editor": "wokwi",
   "parts": [
     {
-      "type": "wokwi-esp32-c3-devkit-m1",
+      "type": "board-esp32-c3-devkitm-1",
       "id": "esp",
       "top": 10,
       "left": 0,
