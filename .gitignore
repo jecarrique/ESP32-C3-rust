@@ -1,0 +1,19 @@
+# Dependencias compiladas de Cargo/Rust
+/target/
+# Nota: Cargo.lock se versiona en proyectos binarios (buena práctica para reproducibilidad)
+
+# Archivos de configuración del IDE (excepto .devcontainer que es parte de la plantilla)
+.idea/
+*.iml
+.vscode/launch.json
+.vscode/.history/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Archivos temporales de Wokwi (los generados automáticamente, no los de configuración)
+diagram.json.bak

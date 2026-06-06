@@ -1,0 +1,8 @@
+[wokwi]
+version = 1
+firmware = "target/riscv32imc-unknown-none-elf/debug/esp32c3-demo"
+chip = "esp32c3"
+
+[chip.env]
+# Variables de entorno para la simulación
+ESP_LOG = "info"
