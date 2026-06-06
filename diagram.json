@@ -41,13 +41,13 @@
     }
   ],
   "connections": [
-    ["esp:GPIO2", "r1:1", "green", ["v0"]],
+    ["esp:2", "r1:1", "green", ["v0"]],
     ["r1:2", "led1:A", "green", ["v0"]],
     ["led1:C", "esp:GND.1", "black", ["v0", "h-50"]],
-    ["esp:GPIO9", "btn1:1.r", "blue", ["h20"]],
+    ["esp:9", "btn1:1.r", "blue", ["h20"]],
     ["btn1:2.r", "esp:GND.1", "black", ["h30", "v80"]],
-    ["esp:GPIO4", "pot1:SIG", "orange", ["v10"]],
-    ["esp:3V3", "pot1:VCC", "red", ["v5", "h70"]],
+    ["esp:4", "pot1:SIG", "orange", ["v10"]],
+    ["esp:3V3.1", "pot1:VCC", "red", ["v5", "h70"]],
     ["esp:GND.2", "pot1:GND", "black", ["v5", "h70"]]
   ],
   "serialMonitor": {
