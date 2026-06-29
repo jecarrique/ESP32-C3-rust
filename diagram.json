@@ -6,53 +6,126 @@
     {
       "type": "board-esp32-c3-devkitm-1",
       "id": "esp",
-      "top": 10,
-      "left": 0,
+      "top": 9.3,
+      "left": -3.78,
       "attrs": {}
     },
     {
       "type": "wokwi-led",
       "id": "led1",
-      "top": -60,
-      "left": 310,
-      "attrs": { "color": "red" }
+      "top": -61.2,
+      "left": 291.8,
+      "attrs": {
+        "color": "red"
+      }
     },
     {
       "type": "wokwi-resistor",
       "id": "r1",
-      "top": 20,
-      "left": 295,
-      "attrs": { "value": "220" },
-      "rotate": 90
+      "top": 23.15,
+      "left": 268.8,
+      "attrs": {
+        "value": "220"
+      }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": 100,
       "left": 290,
-      "attrs": { "color": "green" }
+      "attrs": {
+        "color": "green"
+      }
     },
     {
       "type": "wokwi-potentiometer",
       "id": "pot1",
-      "top": 220,
-      "left": 270,
+      "top": 152.3,
+      "left": 163,
+      "rotate": 180,
       "attrs": {}
     }
   ],
   "connections": [
-    ["esp:2", "r1:1", "green", ["v0"]],
-    ["r1:2", "led1:A", "green", ["v0"]],
-    ["led1:C", "esp:GND.1", "black", ["v0", "h-50"]],
-    ["esp:9", "btn1:1.r", "blue", ["h20"]],
-    ["btn1:2.r", "esp:GND.1", "black", ["h30", "v80"]],
-    ["esp:4", "pot1:SIG", "orange", ["v10"]],
-    ["esp:3V3.1", "pot1:VCC", "red", ["v5", "h70"]],
-    ["esp:GND.2", "pot1:GND", "black", ["v5", "h70"]]
+    [
+      "esp:2",
+      "r1:1",
+      "green",
+      [
+        "h-9.6",
+        "v-57.6",
+        "h336.3"
+      ]
+    ],
+    [
+      "r1:2",
+      "led1:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:C",
+      "esp:GND.1",
+      "black",
+      [
+        "v0",
+        "h-50"
+      ]
+    ],
+    [
+      "esp:9",
+      "btn1:1.r",
+      "blue",
+      [
+        "h20"
+      ]
+    ],
+    [
+      "esp:4",
+      "pot1:SIG",
+      "orange",
+      [
+        "h42.94",
+        "v-0.7",
+        "h65.6"
+      ]
+    ],
+    [
+      "pot1:VCC",
+      "esp:3V3.1",
+      "red",
+      [
+        "v-15.8",
+        "h-74.8",
+        "v38.4",
+        "h-134.4",
+        "v-144"
+      ]
+    ],
+    [
+      "esp:GND.8",
+      "pot1:GND",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "esp:GND.8",
+      "btn1:2.r",
+      "black",
+      [
+        "h181.12",
+        "v76.8",
+        "h86.4"
+      ]
+    ]
   ],
   "serialMonitor": {
     "display": "terminal",
-    "newline": "lf",
-    "baudRate": 115200
-  }
+    "newline": "lf"
+  },
+  "dependencies": {}
 }
